@@ -182,13 +182,20 @@
   .lightbox-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
   @media (max-width: 900px) {
-    nav { padding: 14px 20px; }
+    nav { padding: 14px 20px; flex-wrap: wrap; gap: 12px; justify-content: center; }
     .gallery-header { padding: 32px 20px 20px; }
+    .gallery-title { font-size: 28px; }
     .gallery-tabs { padding: 0 20px 16px; }
     .gallery-grid { padding: 0 20px 40px; columns: 2; }
     .lightbox-nav.prev { left: -10px; }
     .lightbox-nav.next { right: -10px; }
     .lightbox-thumbs { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .gallery-grid { columns: 1; }
+    nav { flex-direction: column; align-items: stretch; text-align: center; }
+    .nav-back { justify-content: center; }
   }
 </style>
 </head>

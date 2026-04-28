@@ -1344,6 +1344,71 @@
     }
 
     @media (max-width: 900px) {
+      nav {
+        padding: 14px 24px;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .nav-links {
+        gap: 16px;
+      }
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+      }
+      .hero-left {
+        padding: 60px 24px 40px 24px;
+      }
+      .hero-title {
+        font-size: clamp(36px, 8vw, 48px);
+      }
+      .hero-right {
+        min-height: 50vh;
+      }
+      .hero-stats {
+        gap: 16px;
+      }
+      
+      section, .blurb-section, .hospital-banner {
+        padding: 48px 24px;
+      }
+      
+      .avail-strip {
+        padding: 12px 24px;
+        font-size: 11px;
+      }
+
+      .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .neighborhood-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      
+      .blurb-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
       .gallery-section {
         padding: 56px 24px;
       }
@@ -1359,6 +1424,15 @@
         aspect-ratio: 1;
       }
 
+      /* Teaser gallery inline styles override */
+      #gallery > div:nth-child(2) {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto auto auto !important;
+      }
+      #gallery > div:nth-child(2) > div:first-child {
+        grid-row: span 1 !important;
+      }
+
       .lightbox-nav.prev {
         left: -16px;
       }
@@ -1369,6 +1443,21 @@
 
       .lightbox-thumbs {
         display: none;
+      }
+      
+      footer {
+        padding: 32px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .amenities-grid {
+        grid-template-columns: 1fr;
+      }
+      .blurb-right {
+        grid-template-columns: 1fr;
       }
     }
   </style>
